@@ -40,6 +40,13 @@
         .social-links a:hover {
             color: #198754;
         }
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
@@ -73,7 +80,38 @@
         
         <section id="home" class="container section-padding text-center">
             <h1 class="display-3 fw-bold text-success">Welcome to Tech Solutions Inc.</h1>
-            <p class="lead mt-4">Pioneering the future of technology with innovative solutions and a dedicated team.</p>
+            <p class="lead mt-4 mb-5">Pioneering the future of technology with innovative solutions and a dedicated team.</p>
+
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 p-3 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fas fa-cloud text-success fa-3x mb-3"></i>
+                            <h5 class="card-title fw-bold">Cloud Solutions</h5>
+                            <p class="card-text text-muted">Scalable, secure, and reliable cloud infrastructure to power your business growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 p-3 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line text-success fa-3x mb-3"></i>
+                            <h5 class="card-title fw-bold">Data Analytics</h5>
+                            <p class="card-text text-muted">Transform raw data into actionable insights with our expert analysis and visualization tools.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 p-3 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fas fa-shield-alt text-success fa-3x mb-3"></i>
+                            <h5 class="card-title fw-bold">Cybersecurity</h5>
+                            <p class="card-text text-muted">Protect your digital assets with cutting-edge security measures and continuous monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <a href="#about" class="btn btn-success btn-lg mt-3">Meet the Team</a>
         </section>
 
@@ -194,6 +232,10 @@
 
     </div>
     
+    <a href="#home" id="backToTop" class="btn btn-success shadow-lg p-3 rounded-circle" role="button" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <footer class="bg-success text-white py-3 mt-auto">
         <div class="container text-center">
             <p class="mb-0">&copy; <span id="currentYear"></span> Tech Solutions Inc. All rights reserved.</p>
@@ -203,6 +245,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
 
         (function () {
             'use strict'
