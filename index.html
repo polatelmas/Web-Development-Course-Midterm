@@ -92,9 +92,9 @@
                             <p class="card-text"><small>Visionary leader guiding the company's long-term strategy and growth.</small></p>
                             
                             <div class="social-links mt-3">
-                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://linkedin.com/in/mnurhan" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://twitter.com/mnurhan" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://github.com/mnurhan" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -109,8 +109,8 @@
                             <p class="card-text"><small>Overseeing all technological development and infrastructure.</small></p>
 
                             <div class="social-links mt-3">
-                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://linkedin.com/in/aozturk" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://twitter.com/aozturk" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                             </div>
                         </div>
                     </div>
@@ -125,8 +125,8 @@
                             <p class="card-text"><small>Managing the company's financial operations and planning.</small></p>
 
                             <div class="social-links mt-3">
-                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="https://linkedin.com/in/jdoe" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="mailto:jane.doe@techsolutions.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
@@ -164,18 +164,27 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <p class="text-center mb-4 lead">We are here to answer any questions you may have. Send us a message!</p>
-                    <form>
+                    <form class="needs-validation" novalidate>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">
+                                Please provide your name.
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
                             <textarea class="form-control" id="message" rows="4" required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter your message.
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-success btn-lg w-100">Send Message</button>
                     </form>
@@ -194,6 +203,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        (function () {
+            'use strict'
+            const form = document.querySelector('.needs-validation')
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                } else {
+                    event.preventDefault(); 
+                    
+                    const contactSection = document.getElementById('contact');
+                    const successAlert = document.createElement('div');
+                    successAlert.className = 'alert alert-success alert-dismissible fade show mt-4';
+                    successAlert.setAttribute('role', 'alert');
+                    successAlert.innerHTML = '<strong>Success!</strong> Thank you for your message. We will be in touch shortly.';
+                    
+                    const existingAlert = contactSection.querySelector('.alert');
+                    if (existingAlert) {
+                        existingAlert.remove();
+                    }
+
+                    contactSection.querySelector('.col-lg-8').prepend(successAlert);
+
+                    form.reset();
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })()
     </script>
 </body>
 </html>
