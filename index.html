@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" xintegrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusAN6/7pYwN+B5w2l7h7hW2v517s7eDk7nKjLg+lEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Our Team</title>
     <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+
         .team-member .card-img-top {
             width: 150px;
             height: 150px;
@@ -53,7 +63,7 @@
         </div>
     </nav>
     
-    <div class="container mt-5 mb-5">
+    <div class="main-content container mt-5 mb-5">
         <h1 class="text-center mb-4 display-4">Meet Our Exceptional Team</h1>
         <p class="text-center text-muted mb-5">Driving innovation and delivering world-class solutions every day.</p>
 
@@ -110,7 +120,16 @@
 
         </div>
     </div>
+    
+    <footer class="bg-success text-white py-3 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0">&copy; <span id="currentYear"></span> Tech Solutions Inc. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
