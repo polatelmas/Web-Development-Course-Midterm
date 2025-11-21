@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" xintegrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusAN6/7pYwN+B5w2l7h7hW2v517s7eDk7nKjLg+lEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Our Team</title>
+    <title>Tech Solutions Inc. - Home</title>
     <style>
         body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            scroll-behavior: smooth; 
         }
 
         .main-content {
             flex-grow: 1;
+        }
+
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
         }
 
         .team-member .card-img-top {
@@ -38,9 +44,9 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Tech Solutions Inc.</a>
+            <a class="navbar-brand" href="#home">Tech Solutions Inc.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -63,62 +69,120 @@
         </div>
     </nav>
     
-    <div class="main-content container mt-5 mb-5">
-        <h1 class="text-center mb-4 display-4">Meet Our Exceptional Team</h1>
-        <p class="text-center text-muted mb-5">Driving innovation and delivering world-class solutions every day.</p>
+    <div class="main-content">
+        
+        <section id="home" class="container section-padding text-center">
+            <h1 class="display-3 fw-bold text-success">Welcome to Tech Solutions Inc.</h1>
+            <p class="lead mt-4">Pioneering the future of technology with innovative solutions and a dedicated team.</p>
+            <a href="#about" class="btn btn-success btn-lg mt-3">Meet the Team</a>
+        </section>
 
-        <div class="row g-4 team-section">
-            
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card team-member text-center shadow-lg border-0 w-100">
-                    <div class="card-body">
-                        <img src="https://placehold.co/150x150/f8f9fa/212529?text=MN" class="card-img-top" alt="Mehmet Nurhan">
-                        <h3 class="card-title mt-3">Mehmet Nurhan</h3>
-                        <p class="card-text text-muted">Chief Executive Officer</p>
-                        <p class="card-text"><small>Visionary leader guiding the company's long-term strategy and growth.</small></p>
-                        
-                        <div class="social-links mt-3">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <section id="about" class="container section-padding bg-light">
+            <h2 class="text-center mb-4 display-4">Meet Our Exceptional Team</h2>
+            <p class="text-center text-muted mb-5">Driving innovation and delivering world-class solutions every day.</p>
+
+            <div class="row g-4 team-section">
+                
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card team-member text-center shadow-lg border-0 w-100">
+                        <div class="card-body">
+                            <img src="https://placehold.co/150x150/f8f9fa/212529?text=MN" class="card-img-top" alt="Mehmet Nurhan">
+                            <h3 class="card-title mt-3">Mehmet Nurhan</h3>
+                            <p class="card-text text-muted">Chief Executive Officer</p>
+                            <p class="card-text"><small>Visionary leader guiding the company's long-term strategy and growth.</small></p>
+                            
+                            <div class="social-links mt-3">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card team-member text-center shadow-lg border-0 w-100">
+                        <div class="card-body">
+                            <img src="https://placehold.co/150x150/f8f9fa/212529?text=AO" class="card-img-top" alt="Ali Ozturk">
+                            <h3 class="card-title mt-3">Ali Ozturk</h3>
+                            <p class="card-text text-muted">Chief Technology Officer</p>
+                            <p class="card-text"><small>Overseeing all technological development and infrastructure.</small></p>
+
+                            <div class="social-links mt-3">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card team-member text-center shadow-lg border-0 w-100">
+                        <div class="card-body">
+                            <img src="https://placehold.co/150x150/f8f9fa/212529?text=JD" class="card-img-top" alt="Jane Doe">
+                            <h3 class="card-title mt-3">Jane Doe</h3>
+                            <p class="card-text text-muted">Chief Financial Officer</p>
+                            <p class="card-text"><small>Managing the company's financial operations and planning.</small></p>
+
+                            <div class="social-links mt-3">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="news" class="container section-padding">
+            <h2 class="text-center mb-5 display-5">Latest Company News</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">New Product Launch</h5>
+                            <p class="card-text">We are excited to announce the launch of our new AI-powered platform next quarter!</p>
+                            <small class="text-muted">October 25, 2025</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Industry Award Nomination</h5>
+                            <p class="card-text">Tech Solutions Inc. has been nominated for the 'Most Innovative Company' award.</p>
+                            <small class="text-muted">September 10, 2025</small>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card team-member text-center shadow-lg border-0 w-100">
-                    <div class="card-body">
-                        <img src="https://placehold.co/150x150/f8f9fa/212529?text=AO" class="card-img-top" alt="Ali Ozturk">
-                        <h3 class="card-title mt-3">Ali Ozturk</h3>
-                        <p class="card-text text-muted">Chief Technology Officer</p>
-                        <p class="card-text"><small>Overseeing all technological development and infrastructure.</small></p>
-
-                        <div class="social-links mt-3">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <section id="contact" class="container section-padding bg-light">
+            <h2 class="text-center mb-5 display-5">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-center mb-4 lead">We are here to answer any questions you may have. Send us a message!</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg w-100">Send Message</button>
+                    </form>
                 </div>
             </div>
+        </section>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card team-member text-center shadow-lg border-0 w-100">
-                    <div class="card-body">
-                        <img src="https://placehold.co/150x150/f8f9fa/212529?text=JD" class="card-img-top" alt="Jane Doe">
-                        <h3 class="card-title mt-3">Jane Doe</h3>
-                        <p class="card-text text-muted">Chief Financial Officer</p>
-                        <p class="card-text"><small>Managing the company's financial operations and planning.</small></p>
-
-                        <div class="social-links mt-3">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </div>
     
     <footer class="bg-success text-white py-3 mt-auto">
